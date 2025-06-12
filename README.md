@@ -12,14 +12,16 @@ This project is an **Arduino Uno-based air quality monitoring system** that dete
 
 ## 🧰 Components Used and Estimated Cost
 
-| S.No | Component              | Description                           | Quantity | Approx.Cost  (₹)| Total (₹) |
-|------|------------------------|------------------------------------_--|----------|-----------------|-----------|
-| 1.   | Arduino Uno            | Main microcontroller board            | 1        | ₹500            | ₹500      |
-| 2.   | MQ135 Gas Sensor       | Detects air quality (CO2, NH3, etc.)  | 1        | ₹200            | ₹200      |
-| 3.   | DHT11 Sensor           | Measures temperature and humidity     | 1        | ₹100            | ₹100      |
-| 4.   | 16x2 LCD Display       | For displaying sensor values          | 1        | ₹150            | ₹150      |    
-| 5.   | Breadboard             | Prototyping platform                  | 1        | ₹80             | ₹80       |    
-| 6.   | Jumper Wires           | For circuit connections               | ~20      | ₹40             | ₹40       |     
+| Component       | Qty | 💰 Cost (INR) |
+|----------------|-----|---------------|
+| Arduino Uno     | 1   | ₹500          |
+| MQ135 Gas Sensor| 1   | ₹200          |
+| DHT11 Sensor    | 1   | ₹100          |
+| 16x2 LCD Display| 1   | ₹150          |
+| Breadboard      | 1   | ₹80           |
+| Jumper Wires    | 1   | ₹40           |
+| Power Supply    | 1   | ₹60           |
+| Others (wires, breadboard) | - | ₹100 |     
 **💰 Total Approximate Cost: ₹1,250 – ₹1,300**
 
 ## 🔧 How It Works
