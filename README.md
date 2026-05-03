@@ -1,6 +1,6 @@
-# 🌫️ Air Pollution Monitoring System (Arduino + IoT Dashboard)
+# 🌫️ Air Pollution Monitoring System (Arduino + Dashboard Visualization)
 
-An embedded sensing system that performs **real-time environmental monitoring, serial data streaming, and dashboard-based visualization** using low-cost sensors.
+An embedded sensing system that performs **real-time environmental monitoring, serial data streaming, and serial-driven dashboard visualization** using low-cost sensors.
 
 ---
 
