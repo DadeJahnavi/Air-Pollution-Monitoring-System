@@ -1,32 +1,158 @@
-# 🌫️ Air Pollution Monitoring System
+# 🌫️ Air Pollution Monitoring System (Arduino + IoT Dashboard)
 
-This project is an **Arduino Uno-based air quality monitoring system** that detects the level of air pollution in the environment. It uses an **MQ135 gas sensor** to measure air quality, a **DHT11 sensor** to monitor temperature and humidity, and a **16x2 LCD display** to show real-time data. The system can also be integrated with a basic web interface to visualize readings remotely.
+An embedded sensing system that performs **real-time environmental monitoring, serial data streaming, and dashboard-based visualization** using low-cost sensors.
 
-## 🚀 Features
+---
 
-- 📉 Real-time monitoring of **air quality** (CO2, NH3, Benzene, etc.)
-- 🌡️ Tracks **temperature** and **humidity** via DHT11
-- 📟 Displays output on a 16x2 LCD
-- 🌐 Optional web interface for remote monitoring
-- 💡 Easy to build and beginner-friendly
+## 🎯 Problem Statement
 
-## 🧰 Components Used and Estimated Cost
+Air quality monitoring is often:
 
-| Component       | Qty | 💰 Cost (INR) |
-|----------------|-----|---------------|
-| Arduino Uno     | 1   | ₹500          |
-| MQ135 Gas Sensor| 1   | ₹200          |
-| DHT11 Sensor    | 1   | ₹100          |
-| 16x2 LCD Display| 1   | ₹150          |
-| Breadboard      | 1   | ₹80           |
-| Jumper Wires    | 1   | ₹40           |
-| Power Supply    | 1   | ₹60           |
-| Others (wires, breadboard) | - | ₹100 |     
-**💰 Total Approximate Cost: ₹1,250 – ₹1,300**
+* Expensive and inaccessible
+* Lacking real-time feedback in small-scale environments
+* Not integrated with user-friendly visualization systems
 
-## 🔧 How It Works
+This project demonstrates a **low-cost embedded solution** for monitoring environmental conditions with **local display + web-based dashboard support**.
 
-1. The **MQ135 sensor** continuously senses air pollutants.
-2. The **DHT11 sensor** captures temperature and humidity.
-3. The data is displayed on a **16x2 LCD** in real-time.
-4. Optionally, values can be transmitted to a web page or serial monitor.
+---
+
+## 🚀 System Overview
+
+The system integrates:
+
+* **Arduino Uno** → sensor data acquisition
+* **MQ135 Gas Sensor** → air quality (pollutants)
+* **DHT11 Sensor** → temperature and humidity
+* **16x2 LCD** → real-time local display
+* **Serial Communication** → data transmission
+* **Web Dashboard (HTML/CSS/JS)** → visualization layer
+
+---
+
+## 🧠 System Architecture
+
+```text
+Sensors (MQ135 + DHT11)
+        ↓
+Arduino Uno (Data Acquisition)
+        ↓
+Serial Communication
+        ↓
+Web Interface (Dashboard)
+        ↓
+User Visualization
+```
+
+---
+
+## ⚙️ Core Functionality
+
+### 📡 Sensor Acquisition
+
+* MQ135 provides raw air quality readings
+* DHT11 captures temperature and humidity
+
+### 🖥️ Local Feedback
+
+* LCD displays:
+
+  * Temperature
+  * Air quality values
+
+### 🔁 Data Streaming
+
+* Sensor data transmitted via Serial:
+
+  ```
+  temperature, humidity, airQuality
+  ```
+
+### 🌐 Visualization Layer
+
+* Web dashboard displays:
+
+  * Temperature
+  * Humidity
+  * Air quality (simulated / extendable to real data)
+
+---
+
+## 🔄 System Workflow
+
+1. Sensors collect environmental data
+2. Arduino processes readings
+3. LCD displays real-time values
+4. Data sent via Serial output
+5. Dashboard updates periodically
+
+---
+
+## ▶️ How to Run
+
+### 🔌 Hardware Setup
+
+1. Connect MQ135 → A0
+2. Connect DHT11 → Digital Pin 2
+3. Connect LCD → Pins (7–12)
+
+### 💻 Software Setup
+
+1. Upload `air_monitor.ino` to Arduino
+2. Open Serial Monitor (9600 baud)
+3. Open `index.html` for dashboard view
+
+---
+
+## ⚙️ Hardware Components
+
+| Component          | Qty | Cost (INR) |
+| ------------------ | --- | ---------- |
+| Arduino Uno        | 1   | ₹500       |
+| MQ135 Sensor       | 1   | ₹200       |
+| DHT11 Sensor       | 1   | ₹100       |
+| LCD 16x2           | 1   | ₹150       |
+| Breadboard + Wires | -   | ₹200       |
+
+**Total:** ₹1250–₹1300
+
+---
+
+## 🔑 Key Features
+
+* Real-time environmental monitoring
+* Multi-sensor data acquisition
+* Embedded display (LCD feedback)
+* Serial-based data pipeline
+* Extendable web dashboard
+
+---
+
+## 🧪 Results
+
+* Stable real-time sensor readings achieved
+* LCD successfully displays environmental data
+* Serial communication enables external visualization
+* Dashboard demonstrates data visualization pipeline
+
+---
+
+## ⚠️ Limitations
+
+* MQ135 outputs raw values (not calibrated AQI)
+* Web dashboard currently uses simulated data
+* No wireless transmission (wired serial only)
+
+---
+
+## 🔮 Future Improvements
+
+* Replace simulation with real-time serial parsing
+* Add ESP32/WiFi for live cloud dashboard
+* Calibrate MQ135 for accurate AQI values
+* Add data logging and historical trends
+
+---
+
+## 📌 Note
+
+This project demonstrates **sensor interfacing, embedded data acquisition, and visualization pipeline design**, forming a foundation for scalable IoT monitoring systems.
